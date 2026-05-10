@@ -1,31 +1,101 @@
-﻿ @page
+﻿# `Pages/Index.cshtml`
+
+```cshtml
+@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Kolkata Tour";
 }
 
-<div class="text-center mt-5">
-    <h1 class="display-4">Welcome Rupam</h1>
-    
-    <p class="lead">
-        This is my first ASP.NET Core Razor Page Application using .NET 9
-    </p>
-
-    <hr />
-
-    <h3>Technologies I Am Learning</h3>
-
-    <ul class="list-group w-50 mx-auto">
-        <li class="list-group-item">Networking</li>
-        <li class="list-group-item">Cyber Security</li>
-        <li class="list-group-item">AWS Cloud</li>
-        <li class="list-group-item">Linux Administration</li>
-        <li class="list-group-item">ASP.NET Core</li>
-    </ul>
-
-    <div class="mt-4">
-        <button class="btn btn-primary">
-            Explore More
-        </button>
+<div class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <div>
+        <h1 class="display-3 fw-bold">Explore Kolkata</h1>
+        <p class="lead">Discover the City of Joy — Heritage, Culture & Food</p>
+        <a class="btn btn-light btn-lg mt-3" href="#places">Start Your Journey</a>
     </div>
 </div>
+
+<section id="places" class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Top Attractions</h2>
+        <p class="text-muted">Must-visit places in Kolkata</p>
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow border-0 h-100">
+                <img src="https://images.unsplash.com/photo-1598091383021-15ddea10925d?q=80&w=1200&auto=format&fit=crop"
+                     class="card-img-top"
+                     alt="Victoria Memorial">
+
+                <div class="card-body">
+                    <h4 class="card-title">Victoria Memorial</h4>
+                    <p class="card-text">
+                        One of Kolkata's most iconic landmarks built with beautiful white marble.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow border-0 h-100">
+                <img src="https://images.unsplash.com/photo-1627301517152-2e4c0b88f1d0?q=80&w=1200&auto=format&fit=crop"
+                     class="card-img-top"
+                     alt="Howrah Bridge">
+
+                <div class="card-body">
+                    <h4 class="card-title">Howrah Bridge</h4>
+                    <p class="card-text">
+                        The legendary bridge over the Hooghly River and symbol of Kolkata.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow border-0 h-100">
+                <img src="https://images.unsplash.com/photo-1583391733981-8497fbcdfb95?q=80&w=1200&auto=format&fit=crop"
+                     class="card-img-top"
+                     alt="Dakshineswar Temple">
+
+                <div class="card-body">
+                    <h4 class="card-title">Dakshineswar Temple</h4>
+                    <p class="card-text">
+                        A peaceful spiritual destination beside the Hooghly River.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="food-section text-white text-center py-5">
+    <div class="container">
+        <h2 class="fw-bold mb-4">Taste Kolkata</h2>
+        <p class="lead">
+            Experience the famous Rosogolla, Mishti Doi, Kolkata Biryani,
+            and delicious Kathi Rolls.
+        </p>
+    </div>
+</section>
+
+<style>
+    .hero-section {
+        height: 85vh;
+        background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1600&auto=format&fit=crop');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card img {
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .food-section {
+        background: #111;
+    }
+</style>
